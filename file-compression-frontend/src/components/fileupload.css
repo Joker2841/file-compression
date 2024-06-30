@@ -12,7 +12,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.5);
+  filter: brightness(1);
 }
 
 .title {
@@ -34,7 +34,7 @@
 
 .upload-button:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(187, 189, 183, 0.718);
 }
 
 .upload-button.file-selected {
