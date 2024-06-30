@@ -32,15 +32,15 @@ const FileUpload = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/compress', formData, {
+      const response = await axios.post('https://file-compression-x1m4.onrender.com/compress', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
       if (response.data.file_url && response.data.decompress_url) {
-        setCompressedLink(`http://127.0.0.1:5000${response.data.file_url}`);
-        setDecompressedLink(`http://127.0.0.1:5000${response.data.decompress_url}`);
+        setCompressedLink(`https://file-compression-x1m4.onrender.com${response.data.file_url}`);
+        setDecompressedLink(`https://file-compression-x1m4.onrender.com${response.data.decompress_url}`);
       } else {
         alert('Error occurred during file compression.');
         console.error('Error response:', response.data);
