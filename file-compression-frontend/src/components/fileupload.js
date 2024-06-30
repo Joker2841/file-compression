@@ -89,16 +89,16 @@ const FileUpload = () => {
     const video = videoRef.current;
     if (video) {
       const handleTimeUpdate = () => {
-        if (video.currentTime >= 35.90) {
-          video.currentTime = 5.50;
+        if (video.currentTime >= 19.9) {
+          video.currentTime = 0.00;
         }
       };
 
       video.addEventListener('timeupdate', handleTimeUpdate);
 
       video.addEventListener('loadeddata', () => {
-        video.currentTime = 5.50;
-        video.playbackRate = 1.15;
+        video.currentTime = 0.00;
+        video.playbackRate = 1.25;
         video.play();
       });
 
@@ -122,7 +122,7 @@ const FileUpload = () => {
   return (
     <Box className="container" display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="100vh" p={4}>
       <video ref={videoRef} autoPlay loop muted className="background-video">
-        <source src="/space.mp4" type="video/mp4" />
+        <source src="/new.mp4" type="video/mp4" />
       </video>
       <Typography variant="h4" mb={2} className="title">File Compression</Typography>
       
